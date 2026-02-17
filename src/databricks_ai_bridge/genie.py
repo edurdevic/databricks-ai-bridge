@@ -461,7 +461,7 @@ class Genie:
     def ask_question(self, question, conversation_id: Optional[str] = None):
         import mlflow
 
-        with mlflow.start_span(name="ask_question") as span:
+        with mlflow.start_span(name="ask_question_v2") as span:
             span.set_attributes(
                 {
                     "space_id": self.space_id,
